@@ -19,7 +19,7 @@ export default function NFTCard({ tokenId }: { tokenId: string }) {
         src={`ulr(${data?.metadata.image})`}
         alt="NFT"
       />
-      <Heading>{data?.metadata.name}</Heading>
+      <Heading fontSize={"xl"}>{data?.metadata.name}</Heading>
       {!address ? (
         <Text>Sign in to claim the pass</Text>
       ) : (
