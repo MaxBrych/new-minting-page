@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import {
   ThirdwebProvider,
+  coinbaseWallet,
   localWallet,
   metamaskWallet,
   smartWallet,
@@ -24,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           factoryAddress: SMART_WALLET,
           thirdwebApiKey: API_KEY,
           gasless: true,
-          personalWallets: [metamaskWallet(), localWallet()],
+          personalWallets: [metamaskWallet(), coinbaseWallet(), localWallet()],
         }),
       ]}
     >
